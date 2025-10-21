@@ -29,14 +29,14 @@ function drawLine(x1, y1, x2, y2) {
   ctx.lineWidth = size * 2
   ctx.stroke()
 }
-// drawLine(300, 300, 300, 500)
+
 
 canvas.addEventListener('mousedown', (e) => {
   isPressed = true
   x = e.offsetX
   y = e.offsetY
 
-  //console.log(isPressed, x, y)
+
 })
 
 canvas.addEventListener('mouseup', (e) => {
@@ -44,7 +44,7 @@ canvas.addEventListener('mouseup', (e) => {
   x = undefined
   y = undefined
 
-  //console.log(isPressed, x, y)
+
 })
 
 canvas.addEventListener('mousemove', (e) => {
@@ -52,7 +52,7 @@ canvas.addEventListener('mousemove', (e) => {
     const x2 = e.offsetX
     const y2 = e.offsetY
 
-    //console.log(x2, y2)
+  
     drawCircle(x2, y2)
     drawLine(x, y, x2, y2)
 
@@ -89,4 +89,5 @@ decreaseBtn.addEventListener('click', () => {
 
 clearBtn.addEventListener('click', () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height)
+
 })
